@@ -90,7 +90,7 @@ export default function App() {
         </p>
         <a
           style={styles.button}
-          href="https://www.paypal.com/donate/?business=P4H293SPRZ2LJ&no_recurring=0&item_name=Help+us+to+build+and+improve+our+apps+for+you%21&currency_code=USD"
+          href="https://www.paypal.com/donate/?business=P4H293SPRZ2LJ&no_recurring=0&currency_code=USD"
           target="_blank"
           rel="noopener noreferrer"
         >
