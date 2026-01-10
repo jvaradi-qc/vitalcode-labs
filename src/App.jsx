@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <img src="/logo.png" alt="VitalCode Labs Logo" style={styles.logo} />
+        <img src="/vitalcode-labs/logo.png" alt="VitalCode Labs Logo" style={styles.logo} />
 
         <h1 style={styles.title}>VitalCode Labs</h1>
         <p style={styles.subtitle}>
