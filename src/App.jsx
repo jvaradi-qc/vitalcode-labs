@@ -82,8 +82,20 @@ export default function App() {
         </p>
 
         <form onSubmit={handleSubmit} style={styles.form}>
-          <input type="text" name="name" placeholder="Your Name" required style={styles.input} />
-          <input type="email" name="email" placeholder="Your Email" required style={styles.input} />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            style={styles.input}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            style={styles.input}
+          />
           <textarea
             name="message"
             placeholder="Your Message"
@@ -96,8 +108,12 @@ export default function App() {
             {status === "sending" ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "sent" && <p style={styles.success}>Message sent successfully!</p>}
-          {status === "error" && <p style={styles.error}>Something went wrong. Please try again.</p>}
+          {status === "sent" && (
+            <p style={styles.success}>Message sent successfully!</p>
+          )}
+          {status === "error" && (
+            <p style={styles.error}>Something went wrong. Please try again.</p>
+          )}
         </form>
       </section>
 
@@ -176,13 +192,13 @@ const styles = {
   input: {
     padding: "12px",
     borderRadius: "6px",
-    border: "1px solid "#ccc",
+    border: "1px solid #ccc",
     fontSize: "1rem",
   },
   textarea: {
     padding: "12px",
     borderRadius: "6px",
-    border: "1px solid "#ccc",
+    border: "1px solid #ccc",
     fontSize: "1rem",
   },
   button: {
