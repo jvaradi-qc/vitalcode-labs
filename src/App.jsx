@@ -7,12 +7,19 @@ export default function App() {
     e.preventDefault();
     setStatus("sending");
 
-    const formData = new FormData(e.target);
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
 
     const response = await fetch("https://formspree.io/f/mqeezvvk", {
       method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
     });
 
     if (response.ok) {
@@ -26,9 +33,14 @@ export default function App() {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <img src="/vitalcode-labs/logo.png" alt="VitalCode Labs Logo" style={styles.logo} />
+        <img
+          src="/vitalcode-labs/logo.png"
+          alt="VitalCode Labs Logo"
+          style={styles.logo}
+        />
 
         <h1 style={styles.title}>VitalCode Labs</h1>
+        <p style={styles.subtitle}>Created by John Varadi</p>
         <p style={styles.subtitle}>
           Mobile app development for personal finance, technology, and healthcare IT.
         </p>
@@ -72,7 +84,13 @@ export default function App() {
         <form onSubmit={handleSubmit} style={styles.form}>
           <input type="text" name="name" placeholder="Your Name" required style={styles.input} />
           <input type="email" name="email" placeholder="Your Email" required style={styles.input} />
-          <textarea name="message" placeholder="Your Message" required rows="5" style={styles.textarea}></textarea>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+            rows="5"
+            style={styles.textarea}
+          ></textarea>
 
           <button type="submit" style={styles.button}>
             {status === "sending" ? "Sending..." : "Send Message"}
@@ -99,7 +117,7 @@ export default function App() {
       </section>
 
       <footer style={styles.footer}>
-        © {new Date().getFullYear()} VitalCode Labs
+        © {new Date().getFullYear()} VitalCode Labs — John Varadi
       </footer>
     </div>
   );
@@ -130,6 +148,7 @@ const styles = {
   subtitle: {
     fontSize: "1.2rem",
     color: "#555",
+    marginTop: "4px",
   },
   section: {
     marginBottom: "50px",
@@ -157,13 +176,13 @@ const styles = {
   input: {
     padding: "12px",
     borderRadius: "6px",
-    border: "1px solid #ccc",
+    border: "1px solid "#ccc",
     fontSize: "1rem",
   },
   textarea: {
     padding: "12px",
     borderRadius: "6px",
-    border: "1px solid #ccc",
+    border: "1px solid "#ccc",
     fontSize: "1rem",
   },
   button: {
