@@ -9,7 +9,7 @@ export default function App() {
 
     const formData = new FormData(e.target);
 
-    const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+    const response = await fetch("https://formspree.io/f/mqeezvvk", {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
