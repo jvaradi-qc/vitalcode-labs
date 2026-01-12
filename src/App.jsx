@@ -34,7 +34,7 @@ export default function App() {
     <div style={styles.container}>
       <header style={styles.header}>
         <img
-          src="/vitalcode-labs/logo.png"
+          src="/logo.png"
           alt="VitalCode Labs Logo"
           style={styles.logo}
         />
