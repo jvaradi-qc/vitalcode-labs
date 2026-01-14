@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -40,6 +42,8 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ⭐ HERO SECTION ⭐ */
 .hero {
   background-image: url('/hero-vitalcode.png');
   background-size: cover;
@@ -51,11 +55,14 @@
   justify-content: center;
   padding: 64px 16px;
   color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 40px;
 }
 
 .hero-content {
   text-align: center;
   max-width: 720px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .hero-content h1 {
@@ -68,4 +75,3 @@
   line-height: 1.6;
   opacity: 0.9;
 }
-
