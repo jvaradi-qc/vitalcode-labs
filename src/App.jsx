@@ -32,6 +32,18 @@ export default function App() {
 
   return (
     <div style={styles.container}>
+
+      {/* ⭐ HERO SECTION WITH BACKGROUND IMAGE ⭐ */}
+      <div style={styles.hero}>
+        <div style={styles.heroContent}>
+          <h1 style={styles.heroTitle}>VitalCode Labs</h1>
+          <p style={styles.heroSubtitle}>
+            Independent mobile app development for personal finance, technology, and healthcare IT.
+          </p>
+        </div>
+      </div>
+
+      {/* EXISTING HEADER */}
       <header style={styles.header}>
         <img
           src="/logo.png"
@@ -46,6 +58,7 @@ export default function App() {
         </p>
       </header>
 
+      {/* PORTFOLIO */}
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>Portfolio</h2>
 
@@ -66,6 +79,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* WHAT I BUILD */}
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>What I Build</h2>
         <p style={styles.text}>
@@ -75,6 +89,7 @@ export default function App() {
         </p>
       </section>
 
+      {/* CONTACT */}
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>Contact Me</h2>
         <p style={styles.text}>
@@ -117,6 +132,7 @@ export default function App() {
         </form>
       </section>
 
+      {/* DONATIONS */}
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>Support our Work</h2>
         <p style={styles.text}>
@@ -148,6 +164,37 @@ const styles = {
     lineHeight: 1.6,
     color: "#222",
   },
+
+  /* ⭐ HERO STYLES ⭐ */
+  hero: {
+    width: "100%",
+    height: "360px",
+    backgroundImage: "url('/hero-vitalcode.png')", // <-- your PNG goes in /public
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    borderRadius: "12px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "40px",
+  },
+  heroContent: {
+    textAlign: "center",
+    color: "white",
+    textShadow: "0 2px 10px rgba(0,0,0,0.4)",
+    padding: "0 20px",
+  },
+  heroTitle: {
+    fontSize: "3rem",
+    marginBottom: "10px",
+  },
+  heroSubtitle: {
+    fontSize: "1.2rem",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+
   header: {
     textAlign: "center",
     marginBottom: "40px",
